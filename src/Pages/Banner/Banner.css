@@ -1,5 +1,12 @@
+.carousel {
+	margin-top: -10vh;
+	z-index: -1;
+}
 .carousel img {
 	background-size: cover;
 	object-fit: cover;
-	height: 89vh;
+	max-height: 100vh;
+}
+.carousel h3 {
+	font-family: "Mochiy Pop P One", sans-serif;
 }

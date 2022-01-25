@@ -7,7 +7,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 const Header = () => {
 	return (
 		<div>
-			<Navbar style={{ background: "#D3E4CD" }} expand="lg">
+			<Navbar style={{ background: "none", height: "10vh" }} expand="lg">
 				<Container>
 					<Navbar.Brand as={Link} to="/">
 						<img src={logo} width={70} alt="" />

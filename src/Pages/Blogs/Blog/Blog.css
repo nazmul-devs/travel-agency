@@ -1,0 +1,56 @@
+.card {
+}
+.card > img {
+	max-height: 240px;
+	object-fit: cover;
+}
+
+.news-card {
+	margin: -30px auto 0;
+	width: 70%;
+	background: #fff;
+	padding: 10px;
+}
+.news-card .news-title,
+.news-country {
+	display: inline;
+	font-size: 13px;
+	color: #6eb48c;
+	position: relative;
+}
+.news-card .news-title::after {
+	content: "";
+	display: inline-block;
+	border: 1px solid;
+	font-size: 13px;
+	margin-left: 10px;
+	position: absolute;
+	top: 50%;
+	width: 4px;
+	height: 4px;
+	transform: rotate(45deg);
+}
+.card-body .category {
+	background: #ebebeb;
+	color: gray;
+	font-size: 17px;
+	box-shadow: -2px -0.5px 3px #000000d3;
+	display: inline-block;
+}
+.card-body .title {
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 1px;
+	margin: 10px 0;
+	font-weight: 800;
+}
+.card-body .author {
+	font-size: 17px;
+	font-weight: 600;
+	color: #555555;
+}
+.card-body .description {
+	color: #555555;
+	font-family: "Poppins", sans-serif;
+	font-size: 17px;
+	text-align: justify;
+}
