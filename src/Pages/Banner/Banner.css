@@ -1,0 +1,5 @@
+.carousel img {
+	background-size: cover;
+	object-fit: cover;
+	height: 89vh;
+}
