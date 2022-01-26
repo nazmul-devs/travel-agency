@@ -1,0 +1,81 @@
+:root {
+	--social-color: #d0d0d0;
+}
+
+.footer {
+	background: url("https://images7.alphacoders.com/804/804957.jpg") no-repeat
+		center;
+	background-size: cover;
+	min-height: 80vh;
+	position: relative;
+}
+.footer-details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000d0;
+}
+.footer-details .social {
+	padding: 30px 0 15px;
+	border-bottom: 1px solid #747474;
+	text-align: center;
+}
+.footer-details .social > ul {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-details .social > ul li {
+	float: none;
+	display: inline-block;
+	cursor: pointer;
+	margin-right: 30px;
+	margin-bottom: 8px;
+	line-height: 36px;
+}
+.footer-details .social > ul li i {
+	width: 36px;
+	height: 36px;
+	line-height: 34px;
+	display: inline-block;
+	border-radius: 50%;
+	background: none;
+	color: var(--social-color);
+	border: 1px solid var(--social-color);
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.footer-details .social > ul li span {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: var(--social-color);
+	letter-spacing: 1px;
+	margin-left: 10px;
+}
+.logo {
+	cursor: pointer;
+}
+.logo h2 {
+	color: var(--social-color);
+	font-size: 50px;
+	font-family: "Mochiy Pop P One", sans-serif;
+	margin: 10px 0;
+}
+.logo h4 {
+	color: var(--social-color);
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	letter-spacing: 4px;
+	margin: 18px 0;
+}
+.logo img {
+	opacity: 0.5;
+	width: 200px;
+}
+.copyright-text {
+	color: var(--social-color);
+	margin-top: 60px;
+}

@@ -7,6 +7,7 @@ const BlogDetails = () => {
 	const { index } = useParams();
 	const blogs = demoBlogs;
 	const blog = blogs[index];
+	document.title = blog.title;
 	return (
 		<div>
 			<Container>
