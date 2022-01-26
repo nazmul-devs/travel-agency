@@ -2,9 +2,10 @@ import React from "react";
 import "./Blog.css";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Rating from "react-rating";
 
 const Blog = (props) => {
-	const { author, category, date, description, img, lotion, title } =
+	const { author, category, date, description, img, lotion, title, rating } =
 		props.blog;
 	const index = props.index;
 	return (
@@ -18,7 +19,15 @@ const Blog = (props) => {
 					<p className="news-country">{lotion}</p>
 				</div>
 				<Card.Body className="card-body">
-					<p className="category px-3 rounded-pill py-1">{category}</p>
+					<div className="d-flex justify-content-between align-items-center">
+						<p className="category px-3 rounded-pill py-1">{category}</p>
+						<Rating
+							className="star"
+							emptySymbol="fa fa-star-o"
+							fullSymbol="fa fa-star"
+							initialRating={rating}
+						/>
+					</div>
 					<Card.Title className="text-center title">{title}</Card.Title>
 					<p className="author">
 						By {author} - {date}

@@ -35,7 +35,6 @@
 	background: #ebebeb;
 	color: gray;
 	font-size: 17px;
-	box-shadow: -2px -0.5px 3px #000000d3;
 	display: inline-block;
 }
 .card-body .title {
@@ -97,4 +96,8 @@
 }
 .social .social-links .link:hover {
 	color: #6eb48c;
+}
+
+.star {
+	color: #ffdf00;
 }

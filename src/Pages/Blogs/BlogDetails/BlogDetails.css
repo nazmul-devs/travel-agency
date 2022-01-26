@@ -1,0 +1,32 @@
+.blog-title > h2 {
+	font-family: "Mochiy Pop P One", sans-serif;
+}
+
+.description p {
+	letter-spacing: 1px;
+	line-height: 2em;
+}
+
+.details-social {
+	border: none !important;
+	padding: 0;
+	text-align: center;
+	position: relative;
+	clear: none;
+}
+.details-social .social-links {
+	position: relative;
+	z-index: 5;
+	background: #ffffff;
+	display: inline-block;
+}
+.details-social .social-links .link {
+	background: #fff;
+	color: #000;
+	font-size: 15px;
+	margin: 0 7px;
+	transition: 0.3s ease;
+}
+.details-social .social-links .link:hover {
+	color: #6eb48c;
+}
