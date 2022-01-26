@@ -1,11 +1,12 @@
 main {
 	height: 100vh;
+	position: relative;
 }
 
 main .aside {
+	position: relative;
 	background: #99a799;
 	width: 250px;
-	height: 100%;
 }
 @media (max-width: 576px) {
 	main .aside {

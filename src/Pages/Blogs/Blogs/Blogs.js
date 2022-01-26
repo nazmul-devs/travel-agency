@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Blog from "../Blog/Blog";
 import "./Blogs.css";
 import { demoBlogs } from "./DemoBlogs";
@@ -12,8 +12,8 @@ const Blogs = () => {
 
 			<Container>
 				<Row xs={1} md={2} className="g-4">
-					{blogs.map((blog) => (
-						<Blog blog={blog} key={blog.id}></Blog>
+					{blogs.map((blog, index) => (
+						<Blog blog={blog} index={index} key={blog.id}></Blog>
 					))}
 				</Row>
 			</Container>

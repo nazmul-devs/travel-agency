@@ -1,5 +1,6 @@
 .blogs-container {
 	width: calc(100vw - 250px);
+	padding: 0 0 20px 0;
 }
 .blogs-container > h2 {
 	text-align: center;

@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
 import Login from "./Pages/Authentication/Login/Login";
-import { Container } from "react-bootstrap";
+import BlogDetails from "./Pages/Blogs/BlogDetails/BlogDetails";
 
 function App() {
 	return (
@@ -14,6 +14,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/login" element={<Login />} />
+				<Route path="/blogs/:index" element={<BlogDetails />} />
 			</Routes>
 		</BrowserRouter>
 	);

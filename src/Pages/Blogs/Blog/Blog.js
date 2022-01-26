@@ -4,16 +4,9 @@ import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Blog = (props) => {
-	const {
-		author,
-		category,
-		date,
-		description,
-		description2,
-		img,
-		lotion,
-		title,
-	} = props.blog;
+	const { author, category, date, description, img, lotion, title } =
+		props.blog;
+	const index = props.index;
 	return (
 		<Col>
 			<Card className="card border-0 rounded-0">
@@ -33,8 +26,26 @@ const Blog = (props) => {
 					<Card.Text className="description">
 						{description.slice(0, 200)}
 					</Card.Text>
-					<Link to={"/"}>Read more</Link>
+					<Link to={`blogs/${index}`} className="Link">
+						Read more ...
+					</Link>
 				</Card.Body>
+				<div className="social">
+					<div className="social-links">
+						<a href="https://www.facebook.com/" className="link">
+							<i className="fab fa-facebook-f"></i>
+						</a>
+						<a href="https://www.facebook.com/" className="link">
+							<i className="fab fa-twitter"></i>
+						</a>
+						<a href="https://www.facebook.com/" className="link">
+							<i className="fab fa-pinterest"></i>
+						</a>
+						<a href="https://www.facebook.com/" className="link">
+							<i className="fas fa-share"></i>
+						</a>
+					</div>
+				</div>
 			</Card>
 		</Col>
 	);
