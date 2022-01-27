@@ -14,6 +14,17 @@
 	background: none;
 	margin: 0 12px;
 }
+.logout-btn {
+	background: #ff7a3c;
+	box-shadow: -1px -1px 2px #000000;
+	color: #fff;
+	margin: 0 12px;
+	transition: 0.3s ease;
+}
+.logout-btn:hover {
+	box-shadow: 1px 1px 3px #000000;
+	color: #fff;
+}
 .signup-btn {
 	background-color: #0b9ed0;
 	border-radius: 4px;

@@ -8,6 +8,7 @@
 	width: 70%;
 	background: #fff;
 	padding: 10px;
+	z-index: 1;
 }
 .news-card .news-title,
 .news-country {

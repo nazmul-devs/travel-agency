@@ -3,6 +3,7 @@ import "./Home.css";
 import Banner from "../Banner/Banner";
 import Sidebar from "../SideBar/Sidebar";
 import Blogs from "../Blogs/Blogs/Blogs";
+import Fade from "react-reveal/Fade";
 
 const Home = () => {
 	return (
@@ -10,10 +11,14 @@ const Home = () => {
 			<Banner />
 			<main className="d-sm-flex">
 				<div className="aside">
-					<Sidebar />
+					<Fade bottom>
+						<Sidebar />
+					</Fade>
 				</div>
 				<section className="blogs">
-					<Blogs />
+					<Fade right>
+						<Blogs />
+					</Fade>
 				</section>
 			</main>
 		</div>

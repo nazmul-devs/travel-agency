@@ -1,0 +1,32 @@
+.login-container {
+	align-items: center;
+	background: url("https://www.libertytravel.com/sites/default/files/styles/full_size/public/Vietnam-a.jpg?itok=cYDxrv3C")
+		no-repeat center;
+
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	min-height: 90vh;
+	width: 100%;
+}
+.login-card {
+	background: #fff;
+	height: 500px;
+	width: 600px;
+}
+.input-form input {
+	background: #bfbfbf75;
+	border: none;
+}
+.submit-btn {
+	background: #ff5e13;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	transition: 0.5s;
+}
+.submit-btn:hover {
+	background: #d64806;
+	color: #fff;
+	box-shadow: 2px 2px 3px #000;
+}

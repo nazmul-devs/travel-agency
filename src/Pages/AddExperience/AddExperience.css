@@ -1,0 +1,23 @@
+.add-experience {
+	background: url("https://images.theconversation.com/files/352733/original/file-20200813-18-19vt3s5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop")
+		no-repeat center;
+	background-size: cover;
+	width: 100%;
+	min-height: 90vh;
+}
+.title-ex {
+	font-family: "Mochiy Pop P One", sans-serif;
+	padding: 15px 0;
+	color: #fff;
+}
+
+.add-form form {
+	width: 500px;
+}
+.add-form form input {
+	background: #fff;
+}
+.star-rating {
+	color: #000000;
+	margin: 10px 0;
+}

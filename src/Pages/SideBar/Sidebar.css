@@ -1,1 +1,22 @@
+.sidebar {
+}
 
+.sidebar .title {
+	font-family: "Mochiy Pop P One", sans-serif;
+	font-size: 28px;
+	border-bottom: 4px solid #3a3737;
+}
+.letest-news > .news {
+	cursor: pointer;
+}
+.letest-news > .news h5 {
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+.letest-news > .news p {
+	font-family: "Poppins", sans-serif;
+	text-align: justify;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+}
