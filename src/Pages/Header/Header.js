@@ -11,7 +11,7 @@ const Header = () => {
 	const { user, logOut } = UseAuth();
 	return (
 		<div>
-			<Navbar style={{ background: "none", height: "10vh" }} expand="lg">
+			<Navbar style={{ background: "none", height: "10vh" }} expand="sm">
 				<Container>
 					<Fade left>
 						<Navbar.Brand as={Link} to="/">
@@ -23,7 +23,7 @@ const Header = () => {
 								<Link to={"/login"} className="link">
 									Family travel
 								</Link>
-								<Link to={"/login"} className="link">
+								<Link to={"/blogs"} className="link">
 									Blogs
 								</Link>
 								<Link to={"/addex"} className="link">
@@ -32,9 +32,11 @@ const Header = () => {
 								<Link to={"/login"} className="link">
 									get in touch{" "}
 								</Link>
-								<Link to={"/delete"} className="link">
-									Update blogs
-								</Link>
+								{user.email && (
+									<Link to={"/delete"} className="link">
+										Update blogs
+									</Link>
+								)}
 							</Nav>
 							<Nav className="login ms-5">
 								<img

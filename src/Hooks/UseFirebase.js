@@ -103,7 +103,7 @@ const UseFirebase = () => {
 	// Get blogs
 	useEffect(() => {
 		axios
-			.get("http://localhost:5000/blogs")
+			.get("https://fathomless-ridge-27071.herokuapp.com/blogs")
 			.then(function (response) {
 				// handle success
 				setBlogs(response.data);

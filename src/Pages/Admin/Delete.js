@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
 
 const Delete = () => {
@@ -7,7 +8,7 @@ const Delete = () => {
 
 	// Delete handle
 	const removeHandle = (id) => {
-		const url = `http://localhost:5000/blogs`;
+		const url = `https://fathomless-ridge-27071.herokuapp.com/blogs`;
 		fetch(url, {
 			method: "DELETE",
 			headers: {
@@ -22,25 +23,38 @@ const Delete = () => {
 		<div>
 			<Container>
 				<Row xs={1} sm={2} md={3} className="g-4">
-					{blogs.map((blog) => (
+					{blogs.map((blog, index) => (
 						<Col>
-							<Card className="card border-0 rounded-0 pb-4">
+							<Card className="card">
 								<Card.Img
 									variant="top"
 									className="rounded-0"
+									height={250}
 									src={blog.img}
 								/>
-								<Card.Body>
-									<h3>{blog.title}</h3>
+								<Card.Body className="p-3">
+									<h5>{blog.title}</h5>
+									<div className="d-flex justify-content-between">
+										<Link to={`/edit/${index}`} className="Link">
+											<button
+												onClick={() => {
+													removeHandle(blog._id);
+												}}
+												className="btn btn-success px-3"
+											>
+												Edit
+											</button>
+										</Link>
+										<button
+											onClick={() => {
+												removeHandle(blog._id);
+											}}
+											className="btn btn-danger px-3 py-1"
+										>
+											Delete
+										</button>
+									</div>
 								</Card.Body>
-								<button
-									onClick={() => {
-										removeHandle(blog._id);
-									}}
-									className="btn btn-danger"
-								>
-									Delete
-								</button>
 							</Card>
 						</Col>
 					))}

@@ -1,101 +1,108 @@
-import React from "react";
-
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Rating from "react-rating";
-import Swal from "sweetalert2";
+import { useParams } from "react-router-dom";
 import UseAuth from "../../Hooks/UseAuth";
-import "./AddExperience.css";
 
-const AddExperience = () => {
-	const { user } = UseAuth();
-	const [rating, setRating] = useState(0);
+const Update = () => {
+	const { blogs } = UseAuth();
+	const { index } = useParams();
+	const {
+		_id,
+		title,
+		img,
+		author,
+		locaiton,
+		category,
+		date,
+		description,
+		cost,
+		rating,
+		img2,
+		title2,
+		description2,
+	} = blogs[index];
 	const { register, handleSubmit, reset } = useForm();
-	const axios = require("axios");
+	const url = `https://fathomless-ridge-27071.herokuapp.com/blogs/${_id}`;
 	const onSubmit = (data) => {
-		data.author = user.displayName;
-		data.rating = rating;
-		axios
-			.post("https://fathomless-ridge-27071.herokuapp.com/blog", data)
-			.then(function (response) {
-				Swal.fire({
-					position: "top-end",
-					icon: "success",
-					title: "Your experience been saved",
-					showConfirmButton: false,
-					timer: 1500,
-				});
-				reset();
-			})
-			.catch(function (error) {
-				console.log(error);
+		fetch(url, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.matchedCount > 0) {
+					alert("User updated successfull");
+				}
 			});
 	};
 	return (
-		<div className="add-experience">
+		<div style={{ background: "#CEE5D0" }}>
 			<Container>
-				<h2 className="text-center title-ex">Add your experience</h2>
 				<div className="d-flex justify-content-center align-items-center add-form">
 					<form
 						onSubmit={handleSubmit(onSubmit)}
 						className="d-flex flex-column input-form"
 					>
 						<input
-							placeholder="Title"
+							defaultValue={title}
 							{...register("title")}
 							className="my-3 py-2 ps-3 rounded "
 						/>
 						<input
-							placeholder="Img url"
+							defaultValue={img}
 							{...register("img")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<input
-							placeholder="Location"
+							defaultValue={locaiton}
 							{...register("locaiton")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<input
-							defaultValue={"Adventure"}
+							defaultValue={category}
 							{...register("category")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<input
+							defaultValue={date}
 							type={"date"}
 							{...register("date")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<textarea
-							placeholder="Your details experience"
+							defaultValue={description}
 							{...register("description")}
 							className="mb-3 py-2 ps-3 rounded"
 							rows="3"
 						></textarea>
 						<input
-							placeholder="Second title"
+							defaultValue={title2}
 							{...register("title2")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<textarea
-							placeholder="More about this blog"
+							defaultValue={description2}
 							{...register("description2")}
 							className="mb-3 py-2 ps-3 rounded"
 							rows="3"
 						></textarea>
 						<input
-							placeholder="Another img url"
+							defaultValue={img2}
 							{...register("img2")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<input
 							type={"number"}
-							placeholder="Total cost $"
+							defaultValue={cost}
 							{...register("cost")}
 							className="mb-3 py-2 ps-3 rounded"
 						/>
 						<Rating
-							onChange={(rate) => setRating(rate)}
 							className="star-rating"
 							emptySymbol="fa fa-star-o fa-2x"
 							fullSymbol="fa fa-star fa-2x"
@@ -117,4 +124,4 @@ const AddExperience = () => {
 	);
 };
 
-export default AddExperience;
+export default Update;
