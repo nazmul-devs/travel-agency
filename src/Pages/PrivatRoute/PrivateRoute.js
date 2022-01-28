@@ -20,7 +20,7 @@ const PrivateRoute = () => {
 	if (user.email) {
 		return <Outlet />;
 	}
-	return <Navigate to="/login" state={{ from: location }} replace />;
+	return <Navigate to="/login" state={{ from: location }} />;
 };
 
 export default PrivateRoute;

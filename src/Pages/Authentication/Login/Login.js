@@ -11,7 +11,6 @@ const Login = () => {
 	const navigate = useNavigate();
 	const { register, handleSubmit, reset } = useForm();
 	const onSubmit = (data) => {
-		console.log(data);
 		reset();
 	};
 
@@ -19,7 +18,9 @@ const Login = () => {
 	return (
 		<div className="login-container">
 			<div className="login-card">
-				<h2 className="text-center my-3">Login here</h2>
+				<h2 className="text-center my-3">
+					{user.email ? "Already logged in" : "Login here"}
+				</h2>
 				{error && <h4 className="text-center text-danger my-2">{error}</h4>}
 				<div className="d-flex justify-content-center ">
 					<form

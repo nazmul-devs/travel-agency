@@ -32,6 +32,9 @@ const Header = () => {
 								<Link to={"/login"} className="link">
 									get in touch{" "}
 								</Link>
+								<Link to={"/delete"} className="link">
+									Update blogs
+								</Link>
 							</Nav>
 							<Nav className="login ms-5">
 								<img

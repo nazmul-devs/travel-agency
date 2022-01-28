@@ -31,6 +31,11 @@ const Footer = () => {
 				<p className="text-center copyright-text">
 					@2022 Experience Travel Group
 				</p>
+				<p className="text-center back-top">
+					<a href="#" className="text-center text-white">
+						Back To Top
+					</a>
+				</p>
 			</div>
 		</div>
 	);

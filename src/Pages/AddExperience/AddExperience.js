@@ -99,6 +99,7 @@ const AddExperience = () => {
 							className="star-rating"
 							emptySymbol="fa fa-star-o fa-2x"
 							fullSymbol="fa fa-star fa-2x"
+							initialRating={rating}
 						/>
 
 						<div className="d-flex align-items-center justify-content-between">

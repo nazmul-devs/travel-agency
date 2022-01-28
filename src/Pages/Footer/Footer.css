@@ -79,3 +79,6 @@
 	color: var(--social-color);
 	margin-top: 60px;
 }
+.back-top > a {
+	text-decoration: none;
+}

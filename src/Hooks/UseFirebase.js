@@ -36,7 +36,8 @@ const UseFirebase = () => {
 			})
 			.catch((error) => {
 				setError(error.message);
-			});
+			})
+			.finally(() => setLoading(false));
 	};
 
 	// =================user register=============
@@ -58,7 +59,8 @@ const UseFirebase = () => {
 			})
 			.catch((error) => {
 				setError(error.message);
-			});
+			})
+			.finally(() => setLoading(false));
 	};
 
 	// ==============login user=============
@@ -70,7 +72,8 @@ const UseFirebase = () => {
 			})
 			.catch((error) => {
 				setError(error.message);
-			});
+			})
+			.finally(() => setLoading(false));
 	};
 
 	// onauth state change
@@ -78,10 +81,10 @@ const UseFirebase = () => {
 		const unsubscribe = onAuthStateChanged(auth, (user) => {
 			if (user) {
 				setUser(user);
-				setLoading(false);
 			} else {
 				setUser({});
 			}
+			setLoading(false);
 			setError("");
 		});
 		return unsubscribe;

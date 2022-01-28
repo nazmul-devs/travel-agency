@@ -32,6 +32,7 @@ const Blog = (props) => {
 								emptySymbol="fa fa-star-o"
 								fullSymbol="fa fa-star"
 								initialRating={rating}
+								readonly
 							/>
 						</div>
 
